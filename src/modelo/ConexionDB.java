@@ -14,7 +14,7 @@ import java.sql.*;
  */
 public class ConexionDB {
     
-    static String db = "alquilerpelis";
+    static String db = "alquilerfuncional";
     static String login= "root";
     static String password = "root";         
     static String url="jdbc:mysql://localhost/"+db;
