@@ -16,6 +16,9 @@ import java.util.logging.Logger;
 public class ControlFormato {
     Persistencia per = new Persistencia();
     
+    public String stridformato;
+    public String strformato;        
+    
 
       public boolean eliminarFormato(int formatoid) {
 
@@ -28,11 +31,14 @@ public class ControlFormato {
     
    public boolean insertarFormato(int formatoid,String format){
     boolean inserto =false;
-    String sql="insert into formato(idformato,formato) "
-            + "values ("+formatoid+",'"+format+"')"; 
+    String sql="call insertar_formato('%codigo','%fnombre') "
+            + "values('"+this.stridformato+"','"+this.strformato+"')";        
     inserto=per.ejecutarDML(sql);
     return inserto;
-    }  
+    } 
+   
+   
+   
       
       
     
